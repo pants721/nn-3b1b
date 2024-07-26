@@ -5,14 +5,6 @@ use rand::Rng;
 use rand::seq::SliceRandom;
 use serde::{Deserialize, Serialize};
 
-fn sigmoid(x: f32) -> f32 {
-    1.0 / (1.0 + (-x).exp())
-}
-
-fn sigmoid_derivative(x: f32) -> f32 {
-    x * (1.0 - x)
-}
-
 #[derive(Debug, Deserialize, Serialize)]
 struct Network {
     layers: Vec<Layer>,
